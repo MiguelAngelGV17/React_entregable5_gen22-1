@@ -2,16 +2,25 @@
     --ff-1: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+.home_top,
+.home_bottom,
+.home_top,
+.home_bottom,
+.container_form,
+.home_container{
+    position: relative;
+}
+
 .home_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
     height: 100vh;
     min-width: 360px;
     max-width: 360px;
     max-height: 625px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+    min-height: 625px;
     padding: 1em;
 
 }
@@ -29,22 +38,53 @@
 }
 
 .container_form {
-    position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1.5s ease-in-out, height 1.5s ease-in-out;
 }
 
-.home_form {
+.home_form,
+.circle_center_top,
+.circle_center_bottom,
+.home_btn_open,
+.circle {
     position: absolute;
+}
+
+.home_form {
     display: grid;
-    align-self: center;
     text-align: center;
     z-index: 1000;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 4rem;
+    font-size: 1.3em;
+}
+
+.home_quote{
+    margin-top: 0.5em;
+}
+.home_input{
+    border-radius: 20px;
+    border: none;
+    width: 90%;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+}
+
+.home_btn-start{
+    font-size: 1em;
+    background-color: red;
+    border-radius: 15px;
+    width: 50%;
+    box-shadow:  inset 0 0 10px black;
+}
+
+.home_btn-start:hover{
+    transform: scale(1.05);
 }
 
 .open_pokeBall {
@@ -57,13 +97,11 @@
 .home_bottom {
     width: 100%;
     height: 50%;
-    min-height: 100px;
+    min-height: 150px;
     background-color: red;
-    position: relative;
     border: 5px solid black;
-    box-shadow: inset 0 0 15px rgb(255, 255, 255);
+    box-shadow: inset 0 0 5px black,inset 0 0 15px white, 0 0 5px black;
 }
-
 
 .circle_center_top,
 .circle_center_bottom {
@@ -72,10 +110,9 @@
     border-radius: 50%;
     border: 25px solid black;
     background-color: white;
-    position: absolute;
     margin: 0 auto;
-    left: 1%;
-    right: 1%;
+    left: 0;
+    right: 0;
 }
 
 .top {
@@ -87,7 +124,9 @@
 }
 
 .home_btn_open {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 45px;
     height: 45px;
     background-color: red;
@@ -99,9 +138,6 @@
     right: 0;
     left: 0;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
     animation: buttonPush 700ms infinite ease-in-out;
 }
@@ -124,57 +160,50 @@
 
 .home_top {
     border-radius: 15px 15px 0 0;
-    position: relative;
 }
 
 .home_bottom {
     border-radius: 0 0 15px 15px;
-    position: relative;
 }
 
-/* .circle_left{
-    font-family: var(--ff-1);
-    position: absolute;
-    z-index: 1000;
-    font-size: 5rem;
-    right: 0px;
-    top: -24px;
-    transform: rotateZ(-45deg);
-} */
-
 .circle {
-    position: absolute;
     border-style: solid;
     border-color: transparent black black transparent;
+    box-shadow: 0 0 5px black;
     border-width: 0px 5px 5px 0;
     border-radius: 0 0px 120px 0px;
     z-index: 1000;
     height: 120px;
     width: 120px;
-    /* top: 0;
-    left: 0; */
 }
 
-.left {
+.left,
+.right {
     top: 0;
+}
+.left {
     left: 0;
+}
 
+.right,
+.right_b{
+    right: 0;
 }
 
 .right {
-    top: 0;
-    right: 0;
     transform: rotateZ(90deg);
 }
 
-.left_b {
+.left_b,
+.right_b {
     bottom: 0;
+}
+
+.left_b {
     transform: rotateZ(270deg);
 }
 
 .right_b {
-    bottom: 0;
-    right: 0;
     transform: rotateZ(-180deg);
 }
 
@@ -182,3 +211,4 @@
     height: 80px;
     width: 80px;
 }
+

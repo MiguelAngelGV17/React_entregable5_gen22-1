@@ -40,12 +40,15 @@ const Home = () => {
       </div>
       <div className={`container_form ${openPokeBall && `open_pokeBall`}`}>
         <div className='home_form '>
-          <h1></h1>
-          <h2>Hello Trainer!</h2>
-          <p>Give me your name to start the adventure</p>
+          <h2 className='home_title'>Hello Trainer!</h2>
+          <p className='home_quote'>Enter your name to start the adventure</p>
           <form onSubmit={handleSubmit}>
-            <input id='name' type="text" />
-            <button>Start</button>
+            <input 
+            className='home_input'
+            id='name' 
+            type="text"
+            />
+            <button className='home_btn-start'>START</button>
           </form>
         </div>
 
