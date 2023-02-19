@@ -1,0 +1,10 @@
+.poke__card-container{
+    background-color: none;
+    width: 200px;
+}
+
+.pokeItem__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
