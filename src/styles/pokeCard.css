@@ -1,10 +1,26 @@
 .poke__card-container{
-    background-color: none;
-    width: 200px;
+    width: 250px;
+    position: relative;
 }
 
-.pokeItem__container{
+.card__container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    max-width: 1115px;
+    /* max-height: 70%; */
+    /* min-height: 70%; */
+    /* height: 550px; */
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.poke_card_img{
+    width: 65%;
+}
+
+.poke_card_status_pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }

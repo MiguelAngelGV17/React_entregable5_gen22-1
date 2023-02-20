@@ -1,9 +1,3 @@
-:root {
-    --ff-1: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.home_top,
-.home_bottom,
 .home_top,
 .home_bottom,
 .container_form,
@@ -20,7 +14,7 @@
     min-width: 360px;
     max-width: 360px;
     max-height: 625px;
-    min-height: 625px;
+    min-height: 515px;
     padding: 1em;
 
 }
@@ -32,9 +26,12 @@
     text-align: center;
 }
 
+
+
 .home_logo {
     max-width: 98%;
     z-index: 1000;
+    margin-bottom: 4.5em;
 }
 
 .container_form {
@@ -43,11 +40,11 @@
     transition: transform 1.5s ease-in-out, height 1.5s ease-in-out;
 }
 
+.circle,
 .home_form,
-.circle_center_top,
-.circle_center_bottom,
 .home_btn_open,
-.circle {
+.circle_center_top,
+.circle_center_bottom {
     position: absolute;
 }
 
@@ -58,7 +55,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    padding: 4rem;
+    padding: 10%;
     font-size: 1.3em;
 }
 
@@ -104,31 +101,42 @@
 }
 
 .circle_center_top,
-.circle_center_bottom {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 25px solid black;
+.circle_center_bottom{
+    width: 170px;
+    height: 85px;
+    border-style: solid;
     background-color: white;
     margin: 0 auto;
     left: 0;
     right: 0;
+    z-index: 1000;
+}
+
+.circle_center_top{
+    border-color: black black transparent;
+    border-width: 25px 25px 0;
+    border-radius: 85px  85px 0px 0px;
+}
+.circle_center_bottom {
+    border-color: transparent black black;
+    border-width: 0 25px 25px 25px;
+    border-radius: 0  0 85px 85px;
 }
 
 .top {
-    bottom: -55px;
+    bottom: -5px;
 }
 
 .bottom {
-    top: -55px;
+    top: -5px;
 }
 
 .home_btn_open {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 75px;
+    height: 75px;
     background-color: red;
     z-index: 2000;
     cursor: pointer;
