@@ -1,6 +1,6 @@
 .pokedex__container{
     height: calc(100vh - 180px);
-    max-height: calc(100vh - 180px);
+    /* max-height: calc(100vh - 180px); */
     width: 80%;
     min-width: 360px;
     max-width: 1115px;
@@ -8,6 +8,7 @@
     margin-right: auto;
     background-color: white;
     display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .pokedex_header{

@@ -18,7 +18,7 @@ const Pokedex = () => {
 
   useEffect(() => {
     if (selectValue === 'allpokemons') {
-      const url = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=0`
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=150&offset=0`
       axios.get(url)
         .then(res => setPokemons(res.data))
         .catch(err => console.log(err))
@@ -41,9 +41,10 @@ const Pokedex = () => {
   }
 
   return (
+    <>
+      <FramePagesTop />
     <div 
     className='pokedex__container'>
-      <FramePagesTop />
       <div className='pokedex_header'>
         <h1 className='pokedex_trainer'>
           Hello
@@ -73,8 +74,9 @@ const Pokedex = () => {
           ))
         }
       </div>
-      <FramePagesBottom />
     </div>
+      <FramePagesBottom />
+    </>
   )
 }
 
