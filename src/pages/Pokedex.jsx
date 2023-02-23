@@ -55,9 +55,14 @@ const Pokedex = () => {
         <form 
         className='pokedex_form'
         onSubmit={handleSubmit}>
-          <div>
-          <input type="text" id="pokemon" placeholder='Search a pokemon'/>
-          <button>Search</button>
+          <div className='pokedex_input_field'>
+          <input 
+          type="text" 
+          id="pokemon" 
+          placeholder='Search pokemon'
+          className='pokedex_input'
+          />
+          <button className='pokedex_btn_search'>Search</button>
 
           </div>
           <SelectTypes

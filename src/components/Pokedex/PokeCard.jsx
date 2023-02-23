@@ -19,7 +19,6 @@ const PokeCard = ({ pokemon }) => {
   const handleClick = () => {
     navigate(`/pokedex/${poke?.id}`)
   }
-  // console.log(poke?.types[0].type.name)
 
   return (
     <article
@@ -42,14 +41,37 @@ const PokeCard = ({ pokemon }) => {
         </ul>
         <hr className='poke_card_separator_line' />
         <ul className='poke_card_status_pokemon'>
-          {
+          {/* {
             poke?.stats.map(stat => (
               <li
                 key={stat.stat.url}>
                 <span> {stat.stat.name} </span>
                 <span> {stat.base_stat} </span></li>
             ))
-          }
+          } */}
+          <div>
+          <li className='pokecard_stat'>
+          <p>{poke?.stats[0].stat.name} </p>
+          <p className={`pokecard_base_stat color_${poke?.types[0].type.name}`}>{poke?.stats[0].base_stat}</p>
+          </li>
+            
+          <li>
+          <p>{poke?.stats[2].stat.name} </p>
+          <p className={`pokecard_base_stat color_${poke?.types[0].type.name}`}>{poke?.stats[2].base_stat}</p>
+          </li>
+          </div>
+
+          <div>            
+          <li className='pokecard_stat'>
+          <p>{poke?.stats[1].stat.name} </p>
+          <p className={`pokecard_base_stat color_${poke?.types[0].type.name}`}>{poke?.stats[1].base_stat}</p>
+          </li>
+
+          <li>
+          <p>{poke?.stats[5].stat.name} </p>
+          <p className={`pokecard_base_stat color_${poke?.types[0].type.name}`}>{poke?.stats[5].base_stat}</p>
+          </li>
+          </div>
         </ul>
       </div>
     </article>

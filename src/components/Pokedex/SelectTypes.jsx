@@ -17,7 +17,9 @@ const SelectTypes = ({setSelectValue}) => {
   }
 
   return (
-    <select onChange={handleChange}>
+    <select 
+    className='pokedex_select'
+    onChange={handleChange}>
       <option value="allpokemons">All Pokemons</option>
       {
         types?.results.map(type => (
