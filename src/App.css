@@ -1,63 +1,65 @@
 .app {
-    background-color: rgb(39, 95, 95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-height: max-content;
+  background-image: url(../font_2_walpaper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mt-1,
 .mb-1 {
-    position: fixed;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 80%;
-    width: 80%;
-    height: 50px;
+  /* position: relative; */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 80%;
+  width: 80%;
+  height: 50px;
 }
 
 .mt-1 {
-    top: 0;
+  top: 0;
 }
 
 .mb-1 {
-    bottom: 0;
+  bottom: 0;
 }
 
 .height {
-    min-height: 90px;
-    max-height: 90px;
-    max-width: 1115px;
-    min-width: 360px;
+  min-height: 90px;
+  max-height: 90px;
+  max-width: 360px;
+  min-width: 360px;
 }
 
 .size-logo {
-    width: 205px;
-    margin-bottom: 1.5em;
+  width: 205px;
+  margin-bottom: 1.5em;
 }
 
 .small-2 {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .size-3,
 .size-4 {
-    width: 80px;
-    height: 40px;
+  width: 80px;
+  height: 40px;
 }
 
 .size-3 {
-    border-color: black black transparent;
-    border-width: 15px 15px 0;
-    border-radius: 40px 40px 0px 0px;
+  border-color: black black transparent;
+  border-width: 15px 15px 0;
+  border-radius: 40px 40px 0px 0px;
 }
 
 .size-4 {
-    border-color: transparent black black;
-    border-width: 0 15px 15px 15px;
-    border-radius: 0 0 40px 40px;
+  border-color: transparent black black;
+  border-width: 0 15px 15px 15px;
+  border-radius: 0 0 40px 40px;
 }

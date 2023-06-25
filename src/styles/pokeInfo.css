@@ -1,106 +1,146 @@
 .pokeInfo_container {
-    height: calc(100vh - 180px);
-    width: 80%;
-    min-width: 360px;
-    max-width: 1115px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    display: grid;
-    overflow: auto;
-    justify-content: center;
+  height: calc(100vh - 180px);
+  width: 80%;
+  min-width: 360px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  display: grid;
+  overflow: auto;
+  justify-content: center;
+  min-height: 430px;
+  max-height: 430px;
+}
+.not-found {
+  position: relative;
+  overflow: unset;
 }
 
+.pokeInfo-error {
+  background-color: #c8fdfc;
+  font-size: 1.2em;
+  height: 70px;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.pokeInfo-error span {
+  color: red;
+}
+
+header button {
+  position: absolute;
+  left: 37%;
+  top: 25%;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+header button:hover {
+  transform: scale(1.1);
+}
 .pokeInfo_items {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1em;
 }
 
 .pokeInfo_aside_1 {
-    width: 50%;
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    margin: 0 auto;
+  width: 50%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .aside1_items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
 }
 
 .pokeInfo_img {
-    width: 55%;
+  width: 55%;
 }
 
 .pokeInfo_namePoke {
-    margin: 0.2em 0;
+  margin: 0.2em 0;
+  text-transform: capitalize;
 }
 
 .aside_1_heightAndWeight {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
 }
 
 .aside1_typeAndeAbility {
-    display: flex;
-    gap: 1rem;
-    margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
 }
 
 .pokeInfo_aside_2 {
-    width: 50%;
-    min-width: 260px;
-    text-align: center;
-    margin: 1em auto;
-    padding: 0 1em 2em 1em;
-    text-transform: capitalize;
+  width: 50%;
+  min-width: 260px;
+  text-align: center;
+  margin: 1em auto;
+  padding: 0 1em 2em 1em;
+  text-transform: capitalize;
 }
 
 .aside2_text {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
 }
 
 .aside2_barStat {
-    width: 100%;
-    background-color: rgb(253, 245, 3);
-    margin-bottom: 0.5em;
-    border-radius: 25px;
+  width: 100%;
+  background-color: rgb(253, 245, 3);
+  margin-bottom: 0.5em;
+  border-radius: 25px;
 }
 
 .barStat {
-    height: 10px;
-    background: linear-gradient(189deg, #1b706e 0.92%, #75b79b 47.96%, #90ab57 99.08%);
-    border-radius: 25px;
+  height: 10px;
+  background: linear-gradient(
+    189deg,
+    #1b706e 0.92%,
+    #75b79b 47.96%,
+    #90ab57 99.08%
+  );
+  border-radius: 25px;
 }
 
 .pokeInfo_aside_3 {
-    /* background-color: pink; */
-    text-align: center;
-    padding: 1em 2em 1em;
-    text-transform: capitalize;
+  /* background-color: pink; */
+  text-align: center;
+  padding: 1em 2em 1em;
+  text-transform: capitalize;
 }
 
 .aside3_containerMoves {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5em;
-    margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1em;
 }
 
-.aside3_move{
-    border-width: 2px;
-    border-radius: 5px;
-    padding: 5px;
+.aside3_move {
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
 }

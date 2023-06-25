@@ -1,26 +1,39 @@
-.card__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  max-width: 1115px;
-  overflow: auto;
-  gap: 0.8em;
+.card_container {
   text-transform: capitalize;
+}
+.true {
+  scale: 0;
+}
+
+.swiper {
+  width: 350px;
+  height: min-content;
+  margin-top: 0.55em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  transition: transform 500ms ease, color 500ms ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.4);
+  --swiper-theme-color: #051ead;
 }
 
 .poke__card_container {
-  width: 255px;
-  height: 330px;
+  width: 185px;
+  height: 280px;
   position: relative;
   text-align: center;
   border-radius: 10px;
+  font-size: 10px;
 }
 
 .poke_card_img {
   position: absolute;
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
   z-index: 1;
   left: 0;
   right: 0;
@@ -56,50 +69,65 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20%;
+  gap: 15%;
 }
 
-.pokecard_base_stat{
-  font-size: 1.2rem;
+.pokecard_base_stat {
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
-.pokecard_stat{
+.pokecard_stat {
   margin-bottom: 1em;
 }
 
 /* ---  Card Colors ---*/
 
 .grass {
-  background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%)
+  background: linear-gradient(
+    178.92deg,
+    #7ec6c5 0.92%,
+    #abdac6 47.96%,
+    #cae099 99.08%
+  );
 }
 
 .border_grass {
   border: 10px solid rgba(177, 219, 188, 1);
 }
 
-.color_grass{
+.color_grass {
   color: rgba(65, 100, 96, 1);
 }
 
 /*---------------------*/
 
 .fire {
-  background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+  background: linear-gradient(
+    176.37deg,
+    #f96d6f -32.26%,
+    #e35825 22.55%,
+    #e8ae1b 125.72%
+  );
 }
 
 .border_fire {
   border: 10px solid rgba(230, 144, 30, 1);
 }
 
-.color_fire{
+.color_fire {
   color: rgba(231, 92, 53, 1);
 }
 
 /*---------------------*/
 
 .water {
-  background: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%);
+  background: linear-gradient(
+    179.57deg,
+    #133258 -70.14%,
+    #1479fb 56.16%,
+    #82b2f1 214.85%
+  );
 }
 
 .border_water {
@@ -112,205 +140,277 @@
 
 /*---------------------*/
 .bug {
-  background: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%);
+  background: linear-gradient(
+    177.56deg,
+    #62db60 -58.92%,
+    #3bb039 16.57%,
+    #aaffa8 209.53%
+  );
 }
 
 .border_bug {
   border: 10px solid rgb(74, 182, 72);
 }
 
-.color_bug{
+.color_bug {
   color: #4ab648;
 }
 
 /*---------------------*/
 
 .normal {
-  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
-
+  background: linear-gradient(
+    181.51deg,
+    #735259 -6.44%,
+    #bc6b7c 121.95%,
+    #7c3f4c 186.11%
+  );
 }
 
 .border_normal {
-  border: 10px solid rgba(115, 82, 89, 1)
+  border: 10px solid rgba(115, 82, 89, 1);
 }
 
-.color_normal{
-  color: rgba(115, 82, 89, 1)
+.color_normal {
+  color: rgba(115, 82, 89, 1);
 }
 
 /*---------------------*/
 .fighting {
-  background: linear-gradient(176.83deg, rgb(150, 64, 42) -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+  background: linear-gradient(
+    176.83deg,
+    rgb(150, 64, 42) -8.78%,
+    #f1613c 169.09%,
+    #cb735d 242.33%
+  );
 }
 
 .border_fighting {
-  border: 10px solid rgba(150, 64, 42)
+  border: 10px solid rgba(150, 64, 42);
 }
 
 .color_fighting {
-  color: rgba(150, 64, 42, 1)
+  color: rgba(150, 64, 42, 1);
 }
 
 /*---------------------*/
-.poison { 
-  background: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%);
-
+.poison {
+  background: linear-gradient(
+    177.03deg,
+    #5b3184 -11.97%,
+    #a564e3 71.28%,
+    #ce9bff 135.64%
+  );
 }
 
 .border_poison {
-  border: 10px solid #5B3184
+  border: 10px solid #5b3184;
 }
 
 .color_poison {
-  color: #5B3184
+  color: #5b3184;
 }
 
 /*---------------------*/
-.ghost { 
-  background: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%);
+.ghost {
+  background: linear-gradient(
+    177.03deg,
+    #323569 -11.97%,
+    #454aa8 57.49%,
+    #787dda 135.64%
+  );
 }
 
 .border_ghost {
-  border: 10px solid  #323569
+  border: 10px solid #323569;
 }
 
 .color_ghost {
-  color: #323569
+  color: #323569;
 }
 
 /*---------------------*/
-.rock { 
-  background: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%);
+.rock {
+  background: linear-gradient(
+    177.03deg,
+    #7e7e7e -11.97%,
+    #8d8d94 57.49%,
+    #d3d3d3 135.64%
+  );
 }
 
 .border_rock {
-  border: 10px solid #7E7E7E
+  border: 10px solid #7e7e7e;
 }
 
 .color_rock {
-  color: #7E7E7E
+  color: #7e7e7e;
 }
 
 /*---------------------*/
-.dark { 
-  background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+.dark {
+  background: linear-gradient(
+    177.03deg,
+    #030706 -11.97%,
+    #0d1211 57.49%,
+    #5a5e5d 135.64%
+  );
 }
 
 .border_dark {
-  border: 10px solid #030706
+  border: 10px solid #030706;
 }
 
 .color_dark {
-  color: #030706
+  color: #030706;
 }
 
 /*---------------------*/
-.ice { 
-  background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
-
+.ice {
+  background: linear-gradient(
+    177.03deg,
+    #6fbedf -11.97%,
+    #64cbf5 47.77%,
+    #bdebfe 136.72%
+  );
 }
 
 .border_ice {
-  border: 10px solid #6FBEDF
+  border: 10px solid #6fbedf;
 }
 
 .color_ice {
-  color: #6FBEDF
+  color: #6fbedf;
 }
 
 /*---------------------*/
-.steel { 
-  background: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%);
+.steel {
+  background: linear-gradient(
+    179.75deg,
+    #5e736c -19.96%,
+    #728881 43.67%,
+    #a8a8a8 138.4%
+  );
 }
 
 .border_steel {
-  border: 10px solid #5E736C
+  border: 10px solid #5e736c;
 }
 
 .color_steel {
-  color: #5E736C
+  color: #5e736c;
 }
 
 /*---------------------*/
-.dragon { 
-  background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+.dragon {
+  background: linear-gradient(
+    179.75deg,
+    #478a93 -19.96%,
+    #56a4ae 43.67%,
+    #a2bec1 138.4%
+  );
 }
 
 .border_dragon {
-  border: 10px solid #478A93
+  border: 10px solid #478a93;
 }
 
 .color_dragon {
-  color: #478A93
+  color: #478a93;
 }
 
 /*---------------------*/
-.fairy { 
-  background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+.fairy {
+  background: linear-gradient(
+    179.75deg,
+    #971b45 -19.96%,
+    #c23867 43.67%,
+    #cd7d98 138.4%
+  );
 }
 
 .border_fairy {
-  border: 10px solid #971B45
+  border: 10px solid #971b45;
 }
 
 .color_fairy {
-  color: #971B45
+  color: #971b45;
 }
 
-/*---------------------*/ 
+/*---------------------*/
 
-.electric { 
-  background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);
+.electric {
+  background: linear-gradient(
+    179.75deg,
+    #0c1395 -19.96%,
+    #2b319b 43.67%,
+    #7075d9 138.4%
+  );
 }
 
 .border_electric {
-  border: 10px solid #0C1395
+  border: 10px solid #0c1395;
 }
 
 .color_electric {
-  color: #0C1395
+  color: #0c1395;
 }
 
 /*---------------------*/
 
-.ground { 
-  background: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%);
+.ground {
+  background: linear-gradient(
+    179.75deg,
+    #654008 -19.96%,
+    #895c1a 43.67%,
+    #d69638 138.4%
+  );
 }
 
 .border_ground {
-  border: 10px solid #654008
+  border: 10px solid #654008;
 }
 
 .color_ground {
-  color: #654008
+  color: #654008;
 }
 
 /*---------------------*/
 
-.psychic { 
-  background: linear-gradient(179.75deg, #a87934 -19.96%, #7f6948 43.67%, #e7bf84 138.4%);
+.psychic {
+  background: linear-gradient(
+    179.75deg,
+    #a87934 -19.96%,
+    #7f6948 43.67%,
+    #e7bf84 138.4%
+  );
 }
 
 .border_psychic {
-  border: 10px solid #a87934
+  border: 10px solid #a87934;
 }
 
 .color_psychic {
-  color: #a87934
+  color: #a87934;
 }
 
 /*---------------------*/
 
-.flying { 
-  background: linear-gradient(179.75deg, #226686 -19.96%, #47a292 43.67%, #b2ecba 138.4%);
+.flying {
+  background: linear-gradient(
+    179.75deg,
+    #226686 -19.96%,
+    #47a292 43.67%,
+    #b2ecba 138.4%
+  );
 }
 
 .border_flying {
-  border: 10px solid #226686
+  border: 10px solid #226686;
 }
 
 .color_flying {
-  color: #226686
+  color: #226686;
 }
 
 /*---------------------*/
